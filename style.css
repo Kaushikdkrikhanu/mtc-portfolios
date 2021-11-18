@@ -1,3 +1,4 @@
+
 *{
     font-family: Trebuchet MS, sans-serif;
 }
@@ -155,7 +156,7 @@ body::-webkit-scrollbar{
     margin-left: 12em ;
     margin-right: 6em;
 }
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1201px){
     .page{
         margin-left: 2em;
         margin-right: 2em;
@@ -238,7 +239,7 @@ body::-webkit-scrollbar{
 
 .projectCards{
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: min-content min-content ;
     margin-left: auto;
     margin-right:auto;
     gap: 2em;
@@ -246,43 +247,35 @@ body::-webkit-scrollbar{
     
     width: fit-content;
 }
+
 @media only screen and (max-width: 1024px){
     .projectCards{
-        grid-template-columns: 1fr;
-        padding: 0 4em;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 0em;
         gap: 1.5em;
     }
 }
-
 .projects img{
     width: 450px;
-    height: auto;
+    height: 500px;
     object-fit: cover;
 }
+
 
 .projects .card{
     
     
    
     width: fit-content;
-   overflow: hidden;
+   
     /* box-shadow: -6px 6px 6px 0 rgba(0, 0, 0, 0.1); */
 
 }
-.projects .card:hover{
-    column-span: 2;
-}
-@media only screen and (max-width: 1201px){
-    .projects .card{
-        width: 350px;
-        
-    }
-}
 
-.projects .description{
-    padding: 0 ;
-    width: 30em;
-}
+
+
+
+
 .projects h3{
     font-size: 2em;
     margin: 0;
@@ -293,6 +286,13 @@ body::-webkit-scrollbar{
 .projects h4{
     color: gray;
     font-weight: 200;
+}
+.projects .description{
+    padding: 0 ;
+    font-weight: 200;
+    
+    
+
 }
 .projects button{
     padding: 1em;
@@ -306,6 +306,54 @@ body::-webkit-scrollbar{
     color: white;
     border-color: #653abd;
 }
+@media only screen and (max-width: 1201px){
+    .projects img{
+        object-fit: cover;
+        width: 45vw;
+
+    }
+    .projects .description{
+        width: 45vw;
+    }
+}
+@media only screen and (max-width: 769px){
+    .projectCards{
+        grid-template-columns: max-content ;
+        padding: 0 0;
+        gap: 1.5em;
+        
+        
+        
+    }
+    .projects .card{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        height: auto;
+        width: fit-content;
+    }
+
+    .projects img{
+        object-fit: cover;
+        width: 75vw;
+
+    }
+    .projects .description{
+        width: 75vw;
+    }
+    
+}
+
+@media only screen and (max-width: 480px){
+    .projects img{
+        width: 80vw;
+        height: 50vh;
+    }
+    .projects .description{
+        width: 80vw;
+    }
+}
+
 .contact{
     width: fit-content;
     margin: auto;
