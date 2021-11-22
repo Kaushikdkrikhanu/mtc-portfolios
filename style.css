@@ -495,3 +495,49 @@ body::-webkit-scrollbar{
     border: 2px solid var(--primary-color);
     cursor: pointer;
   }
+
+  .arrowIcon{
+    position:fixed;
+    bottom: 3em;
+    right: 3em;
+    border-radius: 50%;
+    background-color:transparent;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 4px 5px rgb(0,0,0,.2);
+    
+}
+.social-media-icons{
+    align-self: center;
+    position:fixed;
+    bottom: 6em;
+    right: 3em;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 0.5em;
+    height: 0;
+   
+    overflow: hidden;
+    border-radius: 1.5em;
+    transition: all;
+    transition-delay: 100ms;
+    transition-duration:250ms;
+    transition-timing-function: ease-in;
+    
+}
+
+.social-media-icons img{
+    box-shadow: 0 4px 5px rgb(0,0,0,.2);
+    border-radius: 0.2em;
+    margin-top: 1em;
+    padding: 0.2em;
+    background-color: white;
+}
+.closeIcon{
+    position:fixed;
+    bottom:3em;
+    right: 3.6em;
+    display: none;
+    cursor: pointer;
+}
