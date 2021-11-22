@@ -7,7 +7,7 @@ header{
     margin: 0;
     display: flex;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
+
     background-color: white;
     border-radius: 0.3em;
     position: sticky;
@@ -16,6 +16,54 @@ header{
     padding-left: 4em;
     justify-content: space-between;
 }
+.menu{
+    height: 0em;
+    overflow: hidden;
+    background-color: rgb(248, 246, 246);
+    width: 100vw;
+    transition:all;
+    flex-direction: column;
+    transition-duration: 500ms; 
+    transition-delay: 100ms;   
+    display: flex;
+    
+}
+
+@media only screen and (max-width:769px){
+    
+.show{
+    display: flex;
+    height: 25vh;
+}
+header{
+    position: static;
+    
+}
+}
+.menu a{
+    color: #653abd;
+    background-color: antiquewhite;
+    font-size: 1.5em;
+    padding: 0.5em 1em;
+    width: 100vw;
+    border-bottom: 1px solid black;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.menu a:hover{
+    text-decoration: underline;
+}
+.menu .aboutmenu{
+    border-top: 1px solid black;
+}
+.menuIcon{
+    align-self: center;
+    position: absolute;
+    right: 2em;
+    cursor: pointer;
+    display: none;
+}
 @media only screen and (max-width: 1024px){
     header{
         padding-left: 0;
@@ -23,7 +71,11 @@ header{
 }
 @media only screen and (max-width: 769px){
     header{
+        padding: 0 1.5em;
         justify-content: center;
+    }
+    .menuIcon{
+        display: block;
     }
 }
 
@@ -78,7 +130,7 @@ header .name{
 }
 body{
     margin: 0;
-
+ 
     position: relative;
     background-color: rgb(248, 246, 246);
     scrollbar-width: none;
@@ -137,6 +189,16 @@ body::-webkit-scrollbar{
     .personal h3{
         padding-left: 1em;
     }
+    .profilePic{
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .personal h1{
+        margin-top: -0.7em;
+        font-size: 1em;
+    }
 }
 
 
@@ -171,6 +233,7 @@ body::-webkit-scrollbar{
         padding: 0;
     }
 }
+
 
 .skills{
     margin-top: 3em;
