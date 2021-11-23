@@ -8,14 +8,14 @@
   <header>
     <h1 class="name">John Doe</h1>
     <ul class="tabs" id="tab">
-      <li class="about">About</li>
-      <li>Skills</li>
-      <li>Projects</li>
-      <li>Contact</li>
+      <li class="about" onclick="scrollDiv('about')">About</li>
+      <li onclick="scrollDiv('skills')">Skills</li>
+      <li onclick="scrollDiv('projects')">Projects</li>
+      <li onclick="scrollDiv('content')">Contact</li>
     </ul>
   </header>
   <body>
-    <div class="page">
+    <div class="page" id="about">
       <div class="profile">
         <div class="personal">
           <h1>Welcome To</h1>
@@ -164,9 +164,27 @@
 
         }
         console.log(isOpen);
-      
+        
         
       }
+      function scrollDiv(xd){
+            var elem = document.getElementById(xd);
+            console.log("dasdasdas",elem);
+            window.scrollTo(0,findPosition(elem)-100);
+            
+        }
+        function findPosition(obj) {
+                var currenttop = 0;
+                if (obj.offsetParent) {
+                    do {
+                        currenttop += obj.offsetTop;
+                    } while ((obj = obj.offsetParent));
+                    return [currenttop];
+                }
+            }
+        function menuHandler(){
+            console.log("menuHandler",document.getElementById("menu").classList.toggle("show"));
+        }
     </script>
   </body>
 </html>

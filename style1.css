@@ -17,22 +17,24 @@ header{
     box-shadow: 0 3px 4px rgba(0, 0,0,0.1);
     background-color: white;
     position:sticky;
+    /* *used to position the header at the top of the website */  
     top: 0;
     z-index: 10;
+    /* *to keep the element in front*/
 }
 
 
 .tabs li{
-    list-style: none;
-    display: inline-block;
-    font-size: 1.2em;
+    list-style: none; /**to remove the dots from the list*/
+    font-size: 1.2em; 
+    cursor: pointer;/**change the cursor to a pointer*/
 }
 
 .tabs{
-    align-self: center;
+    align-self: center; /**to center them vertically*/
     display: flex;
-    justify-content: space-between;
-    width: 40%;
+    justify-content: space-between; /**keep space in between the lis*/
+    width: 40%;/**elements sticks together so increase the distance between them*/
     color: blueviolet;
 }
 
@@ -69,7 +71,7 @@ header .name{
     width: 30em;
 }
 .profilePic{
-    display: block;
+    
     margin-left: 4em;
     opacity: 80%;
     border-radius: 4em;
